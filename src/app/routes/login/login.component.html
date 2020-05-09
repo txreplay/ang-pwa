@@ -1,0 +1,17 @@
+<div class="container">
+  <h2>Login</h2>
+
+  <div class="row">
+    <div class="col align-self-center">
+      <form [formGroup]="form" (submit)="login()" novalidate>
+        <div class="form-group">
+          <input class="form-control" type="email" placeholder="email" name="email" formControlName="email">
+          <input class="form-control" type="password" placeholder="password" name="password" formControlName="password">
+
+          <button type="submit" [disabled]="!form.valid">Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</div>

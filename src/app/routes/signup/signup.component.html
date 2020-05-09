@@ -1,0 +1,19 @@
+<div class="container">
+  <h2>Sign Up</h2>
+
+  <div class="row">
+    <div class="col align-self-center">
+      <form [formGroup]="form" (submit)="signup()" novalidate>
+        <div class="form-group">
+          <input class="form-control" type="text" placeholder="firstname" name="firstname" formControlName="firstname">
+          <input class="form-control" type="text" placeholder="lastname" name="lastname" formControlName="lastname">
+          <input class="form-control" type="email" placeholder="email" name="email" formControlName="email">
+          <input class="form-control" type="password" placeholder="password" name="password" formControlName="password">
+
+          <button type="submit" [disabled]="!form.valid">Sign Up</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</div>

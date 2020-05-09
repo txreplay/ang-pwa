@@ -1,0 +1,15 @@
+<div class="container">
+  <h2>Chat</h2>
+
+  <div class="row">
+    <div class="col align-self-center">
+      <form [formGroup]="form" (submit)="sendMessage()" novalidate>
+        <div class="form-group">
+          <textarea class="form-control"name="message" id="message" placeholder="message" formControlName="message" cols="30" rows="5"></textarea>
+          <button type="submit" [disabled]="!form.valid">Send</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</div>
